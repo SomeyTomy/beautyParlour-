@@ -1,0 +1,6 @@
+SELECT time.stime,time.etime FROM time INNER JOIN booking ON booking.time_id != time.id WHERE booking.emp_id = 5
+
+
+
+
+SELECT * FROM time WHERE time_id NOT IN (SELECT time_id from booking WHERE emp_id = 5 and book_date = '2021-02-17')
